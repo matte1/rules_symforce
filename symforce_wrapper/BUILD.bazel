@@ -1,0 +1,12 @@
+load("@python_deps//:requirements.bzl", "requirement")
+
+py_binary(
+    name = "generator",
+    srcs = [
+        "generator.py",
+    ],
+    visibility = ["//visibility:public"],
+    deps = [
+        requirement("symforce"),
+    ],
+)

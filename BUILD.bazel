@@ -1,0 +1,15 @@
+load("@rules_python//python:pip.bzl", "compile_pip_requirements")
+
+exports_files([".clang-tidy"])
+
+compile_pip_requirements(
+    name = "requirements",
+    # Due to usage of setuptools
+    extra_args = ["--allow-unsafe"],
+    requirements_txt = "requirements_lock.txt",
+    tags = [
+        "flaky",
+        "no-remote-exec",
+        "requires-network",
+    ],
+)
