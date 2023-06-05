@@ -1,0 +1,13 @@
+load("//symforce_wrapper:symforce_wrapper.bzl", "symforce")
+
+symforce(
+    name = "simple",
+    generator = "gen_simple.py",
+    visibility = ["//visibility:public"],
+)
+
+cc_test(
+    name = "test_simple",
+    srcs = ["test_simple.cc"],
+    deps = [":sym_simple_cc"],
+)

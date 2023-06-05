@@ -1,0 +1,4 @@
+# This is the human-readable source of truth for python third party dependencies.
+# The file //:requirements_lock.txt is generated from this file by running
+#   > bazel run //:requirements.update
+symforce

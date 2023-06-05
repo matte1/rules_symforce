@@ -1,0 +1,16 @@
+# bazel build tree
+/bazel-*
+
+# User-specific bazelrc file
+/.bazelrc.user
+
+# Visual Studio Code user configuration
+/.vscode/configurationCache.log
+
+# vim swap files
+*.swo
+*.swp
+
+# Clangd
+/.clangd/**
+
